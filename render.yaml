@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: arbatwood
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TARGET_SITE
+        value: https://arbatwood-temp-20260814.elb001.chatgpt.site
+      - key: NODE_ENV
+        value: production
